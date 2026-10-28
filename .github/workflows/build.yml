@@ -9,6 +9,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 11
+      - run: rm -f app/src/main/res/drawable-nodpi/*~*
       - run: chmod +x gradlew && ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4
         with:
