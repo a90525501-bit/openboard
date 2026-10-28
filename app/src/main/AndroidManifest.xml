@@ -81,7 +81,6 @@
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
@@ -150,5 +149,13 @@
                 android:multiprocess="false"
                 android:label="@string/dictionary_provider_name">
         </provider>
+         <activity
+    android:name=".WelcomeActivity"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+    </intent-filter>
+</activity>
     </application>
 </manifest>
