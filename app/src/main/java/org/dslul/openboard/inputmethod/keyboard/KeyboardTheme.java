@@ -217,6 +217,8 @@ public final class KeyboardTheme implements Comparable<KeyboardTheme> {
     /* package private for testing */
     static KeyboardTheme getKeyboardTheme(final SharedPreferences prefs, final int sdkVersion,
             final KeyboardTheme[] availableThemeArray) {
+        final KeyboardTheme locked = searchKeyboardThemeById(DEFAULT_THEME_ID, availableThemeArray);
+if (locked != null) return locked;
         final String lxxThemeIdString = prefs.getString(LXX_KEYBOARD_THEME_KEY, null);
         if (lxxThemeIdString == null) {
             return getDefaultKeyboardTheme(prefs, sdkVersion, availableThemeArray);
