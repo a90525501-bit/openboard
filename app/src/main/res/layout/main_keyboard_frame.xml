@@ -41,12 +41,14 @@
         android:id="@+id/keyboard_view_wrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/keyboard_bg"
         android:layoutDirection="ltr" >
 
         <org.dslul.openboard.inputmethod.keyboard.MainKeyboardView
             android:id="@+id/keyboard_view"
             android:layoutDirection="ltr"
             android:layout_width="match_parent"
+            android:background="@android:color/transparent"
             android:layout_height="wrap_content" />
 
         <ImageButton
